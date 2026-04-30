@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClarityCheck AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-icon">CC</div>
+        <span>ClarityCheck AI</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#proofreader">Proofreader</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#features">Features</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag">AI proofreading made simple</p>
+        <h1>Check your writing before you send it.</h1>
+        <p class="hero-sub">
+          Paste an email, essay, paragraph, or short response. ClarityCheck AI gives a score, verdict, simple feedback, and a cleaner version.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#proofreader" class="btn primary">Try It</a>
+          <a href="#feedback" class="btn secondary">See Feedback</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="mini-tag">AI Powered</p>
+        <div class="score-circle">
+          <span>AI</span>
+          <p>Writing Judge</p>
+        </div>
+        <h3>Proofread smarter.</h3>
+        <p>
+          ClarityCheck AI checks grammar, clarity, tone, and structure to help you send better writing.
+        </p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div>
+        <h2>5</h2>
+        <p>Writing types</p>
+      </div>
+      <div>
+        <h2>AI</h2>
+        <p>Feedback</p>
+      </div>
+      <div>
+        <h2>100</h2>
+        <p>Point score</p>
+      </div>
+    </section>
+
+    <section id="proofreader" class="section proofreader-section">
+      <div class="section-header">
+        <p class="section-tag">Proofreader</p>
+        <h2 class="section-title">Paste your writing and get a real verdict.</h2>
+        <p class="section-sub">
+          Works for emails, essays, discussion posts, paragraphs, applications, and short responses.
+        </p>
+      </div>
+
+      <div class="tool-grid">
+        <div class="input-card">
+          <div class="controls">
+            <select id="writingType">
+              <option value="General">General Writing</option>
+              <option value="Email">Email</option>
+              <option value="Essay">Essay</option>
+              <option value="Paragraph">Paragraph</option>
+              <option value="College Application">College / Application</option>
+            </select>
+
+            <select id="toneType">
+              <option value="Professional">Professional</option>
+              <option value="Friendly">Friendly</option>
+              <option value="Academic">Academic</option>
+              <option value="Confident">Confident</option>
+            </select>
+          </div>
+
+          <textarea id="writingInput" placeholder="Paste your essay, email, paragraph, or message here..."></textarea>
+
+          <div class="button-row">
+            <button id="analyzeBtn">Analyze Writing</button>
+            <button id="clearBtn" class="outline-btn">Clear</button>
+          </div>
+
+          <div class="sample-row">
+            <button class="sample-btn" id="badEmailSample">Bad Email Sample</button>
+            <button class="sample-btn" id="goodEmailSample">Good Email Sample</button>
+            <button class="sample-btn" id="essaySample">Essay Sample</button>
+          </div>
+        </div>
+
+        <div class="results-card">
+          <p class="small-label">Writing Score</p>
+          <div id="scoreDisplay" class="big-score">--</div>
+          <div id="verdictDisplay" class="verdict">Paste writing to begin</div>
+
+          <div class="meter">
+            <div id="meterFill"></div>
+          </div>
+
+          <div class="mini-stats">
+            <div>
+              <strong id="wordCount">0</strong>
+              <span>Words</span>
+            </div>
+            <div>
+              <strong id="sentenceCount">0</strong>
+              <span>Sentences</span>
+            </div>
+            <div>
+              <strong id="readTime">0 min</strong>
+              <span>Read Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="section dark">
+      <div class="section-header">
+        <p class="section-tag">Feedback</p>
+        <h2 class="section-title">Simple feedback you can actually use.</h2>
+      </div>
+
+      <div class="feedback-grid">
+        <div class="feedback-card">
+          <h3>Grammar</h3>
+          <p id="grammarFeedback">No writing analyzed yet.</p>
+        </div>
+
+        <div class="feedback-card">
+          <h3>Clarity</h3>
+          <p id="clarityFeedback">No writing analyzed yet.</p>
+        </div>
+
+        <div class="feedback-card">
+          <h3>Tone</h3>
+          <p id="toneFeedback">No writing analyzed yet.</p>
+        </div>
+
+        <div class="feedback-card">
+          <h3>Structure</h3>
+          <p id="structureFeedback">No writing analyzed yet.</p>
+        </div>
+      </div>
+
+      <div class="improved-card">
+        <div class="improved-header">
+          <h3>Cleaner Version</h3>
+          <button id="copyBtn">Copy</button>
+        </div>
+        <div id="improvedText" class="improved-text">
+          Your improved version will appear here.
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features-section">
+      <p class="section-tag">Features</p>
+      <h2 class="section-title">Built for school and real life writing.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">📧</div>
+          <h3>Email Checker</h3>
+          <p>Checks if your email sounds respectful, clear, complete, and ready to send.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">📝</div>
+          <h3>Essay Feedback</h3>
+          <p>Looks for structure, weak wording, reasoning, transitions, and completeness.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">🚦</div>
+          <h3>Real Verdict</h3>
+          <p>Rates writing as Polished, Usable, Needs Work, Bad Draft, or Do Not Send.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">✨</div>
+          <h3>Cleaner Rewrite</h3>
+          <p>Turns rough writing into a cleaner version with better tone and wording.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 ClarityCheck AI. Proofreading support for essays, emails, and everyday writing.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

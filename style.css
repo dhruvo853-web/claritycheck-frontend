@@ -462,3 +462,22 @@ footer {
     font-size: 36px;
   }
 }
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.creator-line {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-left: 54px;
+}
+
+.creator-line a {
+  color: #bfdbfe;
+}
+
+.creator-line a:hover {
+  color: white;
+}
